@@ -469,11 +469,13 @@ hr {
   bottom: 0;
   padding-top: 1rem;
   background-image: linear-gradient(
-    to right bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 1)
-  );
+      to right bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 1)
+    ),
+    url(../img/paintdrop.jpg);
   width: 100%;
+  background-size: contain;
   height: 38rem;
   margin: auto;
 
@@ -586,23 +588,71 @@ hr {
 .social:hover {
   scale: 1.2;
 }
+.break {
+  height: 11.5rem;
+}
+
 .gallery-page {
-  padding-top: 15rem;
-  height: 140rem;
-  background-image: url(../img/paintb.jpg);
-  background-size: cover;
+  height: 230rem;
+  background-image: url(../img/paintb1.jpg);
+  background-size: 100% 100%;
   background-position: left;
   padding-bottom: 20rem;
+  color: black;
 
+  &-category {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-left: 33rem;
+    font-size: 1.8em;
+    padding-bottom: 3rem;
+  }
+  &-category1 {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
   &-images {
     padding-left: 18rem;
+    padding-bottom: 3rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2em;
+    column-gap: 1em;
 
     &-image {
       height: 350px;
       width: 240px;
+      display: flex;
+      flex-direction: column;
+
+      &-description {
+        font-size: 1.5em;
+        color: black;
+      }
+    }
+  }
+  &-title {
+    font-size: 3.5em;
+    margin: auto;
+    text-align: center;
+    padding: 4rem;
+    letter-spacing: 0.2em;
+    font: outline;
+    font-weight: bold;
+
+    &-sub {
+      font-size: 0.8em;
+      font-weight: lighter;
+    }
+    &-sub1 {
+      font-size: 0.6em;
+      font-weight: lighter;
+      letter-spacing: -0.01em;
     }
   }
 }
@@ -610,4 +660,68 @@ hr {
   height: 350px;
   width: 240px;
   object-fit: cover;
+}
+.gallery-image:hover {
+  scale: 1.2;
+  outline: 3px solid black;
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+  outline-offset: 2rem;
+}
+.image-break {
+  width: 100%;
+  height: 4rem;
+  background-image: linear-gradient(
+    to right bottom,
+    white,
+    rgba(128, 128, 128, 1)
+  );
+}
+.image-page {
+  padding-top: 11rem;
+  width: 100%;
+  height: 100rem;
+  background-image: url(../img/paintb1.jpg);
+  background-size: 100% 100%;
+  background-position: left;
+  padding-bottom: 20rem;
+  color: black;
+
+  &-main {
+    padding-top: 10rem;
+    padding: 10rem;
+    width: 100%;
+    height: 90rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+
+    &-1 {
+      padding-top: 2rem;
+      padding-right: 2rem;
+      text-align: right;
+      font-size: 4em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+
+      &-description {
+        font-size: 0.5em;
+        margin: 1rem;
+      }
+    }
+  }
+  &-image {
+    height: 61rem;
+  }
+}
+.artist-page {
+  height: 100rem;
+  width: 100%;
+  background-image: url(../img/paintb.jpg);
+  background-size: 100% 100%;
+  background-position: left;
+  padding-bottom: 20rem;
+  color: black;
 }
