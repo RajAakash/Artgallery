@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -486,16 +487,14 @@ hr {
 
 .gallery-page {
   height: 230rem;
-  background-image: url(../img/paintb1.jpg);
+  background-image: linear-gradient(to right bottom, silver, gray);
   background-size: 100% 100%;
-  background-position: left;
   padding-bottom: 20rem;
   color: black; }
   .gallery-page-category {
     width: 80%;
     margin: auto;
     text-align: left;
-    padding-left: 33rem;
     font-size: 1.8em;
     padding-bottom: 3rem; }
   .gallery-page-category1 {
@@ -506,7 +505,8 @@ hr {
     padding-top: 2rem;
     padding-bottom: 1rem; }
   .gallery-page-images {
-    padding-left: 18rem;
+    margin: auto;
+    width: 90%;
     padding-bottom: 3rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -544,6 +544,7 @@ hr {
 .gallery-image:hover {
   scale: 1.2;
   outline: 3px solid black;
+  transition-duration: 0.3s;
   box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
   transition: all 0.2s;
   outline-offset: 2rem; }
@@ -585,11 +586,65 @@ hr {
   .image-page-image {
     height: 61rem; }
 
-.artist-page {
-  height: 100rem;
+.artists-page {
+  padding-top: 15rem;
+  height: 280rem;
   width: 100%;
-  background-image: url(../img/paintb.jpg);
+  background-image: linear-gradient(to right bottom, silver, gray);
   background-size: 100% 100%;
   background-position: left;
   padding-bottom: 20rem;
+  color: black; }
+  .artists-page-title {
+    margin: auto;
+    text-align: center;
+    font-size: 2.5em;
+    padding-bottom: 3rem;
+    font-weight: bold; }
+  .artists-page-artists {
+    width: 100%;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column; }
+    .artists-page-artists-artist {
+      padding: 2rem;
+      margin: auto;
+      width: 90%;
+      height: 25rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: 1fr 3fr; }
+
+.artist-images1 {
+  height: 220px; }
+
+.artist-images1:hover {
+  scale: 1.02;
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+  transition: all 0.2s; }
+
+.artist-description {
+  font-size: 1.2em; }
+  .artist-description-title {
+    font-size: 1.5em; }
+
+blockquote {
+  border: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-bottom: -30px;
+  quotes: "“" "”" "‘" "’"; }
+
+blockquote h3 {
+  font-size: 21px; }
+
+blockquote h3:before {
+  content: open-quote;
+  font-weight: bold;
+  font-size: 100px;
+  color: black; }
+
+blockquote h3:after {
+  content: close-quote;
+  font-weight: bold;
+  font-size: 100px;
   color: black; }
