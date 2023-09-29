@@ -1,2 +1,2 @@
 # Artgallery
-Art gallery of Mohan tamang
+Sample Art gallery site.
